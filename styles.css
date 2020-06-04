@@ -10,3 +10,21 @@ html {
     padding: 10px;
     text-align: center;
 }
+#login-signup {
+  text-align: center;
+}
+
+.pin-image-container {
+  background-color: lightgreen;
+  display: grid;
+  height: 400px;
+  width: 800px;
+  align-content: center;
+}
+
+.pin-description {
+  color: white;
+}
+.pin-title {
+  color: blue;
+}
