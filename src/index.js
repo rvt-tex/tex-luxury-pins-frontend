@@ -24,3 +24,22 @@ function getPins() {
         })
     })
 }
+
+const createPinForm = document.querySelector('#new-pin-form');
+
+createPinForm.addEventListener("submit", (e) => createPinFormHandler(e));
+
+function createPinFormHandler(e) {
+    e.preventDefault()
+    const titleInput = document.querySelector('#input-title').value
+	const image_urlInput = document.querySelector('#input-image_url').value
+    const descriptionInput = document.querySelector('#input-description').value
+    const brandInput = document.querySelector('#brands').value
+    const brandId = parseInt(brandInput)
+    // postfetchPin(titleInput, image_urlInput, descriptionInput, brandInput)
+
+}
+
+function postfetchPin(title, image_url, description, brand_id) {
+    console.log(title, image_url, description, brand_id)
+}
