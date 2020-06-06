@@ -9,3 +9,5 @@ class Pin {
         this.user = pinAttributes.user
     }
 }
+
+Pin.all = []
