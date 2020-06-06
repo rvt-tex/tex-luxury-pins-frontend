@@ -2,6 +2,8 @@ const pinsEndpoint = "http://localhost:3000/pins"
 
 document.addEventListener("DOMContentLoaded", () => {
     getPins()
+    const createPinForm = document.querySelector('#new-pin-form');
+    createPinForm.addEventListener("submit", (e) => createPinFormHandler(e));
 })
 
 function getPins() {
@@ -9,31 +11,11 @@ function getPins() {
     .then(response => response.json())
     .then(pins => {
         pins.data.forEach(pin => {
-            debugger
-            let newPin = new Pin(pin, pin.attributes) 
-            render(pin)     
+            let newPin = new Pin(pin, pin.attributes)
+        document.querySelector('#pins-container').innerHTML += newPin.renderPinCard();
+
     })
 })
-
-const createPinForm = document.querySelector('#new-pin-form');
-
-createPinForm.addEventListener("submit", (e) => createPinFormHandler(e));
-
-
-function render(pin) {
-    const pinsLayout = 
-        `<div data-id=${pin.id}>
-        <h4>${pin.attributes.user.name}   @${pin.attributes.user.email}</h4>
-        <h4>${pin.attributes.brand.name}</h4>
-        <h4>${pin.attributes.title}</h4>
-        <img src=${pin.attributes.image_url} width="800" height="600">
-        <h4>${pin.attributes.description}</h4>   
-        <br>
-        <button data-id=${pin.id}>Delete Pin</button>
-        </div>`;
-
-        document.querySelector("#pins-container").innerHTML += pinsLayout
-    }
 }
 
 function createPinFormHandler(e) {
@@ -59,6 +41,10 @@ function postfetchPin(title, image_url, description, brand_id, user_id) {
       .then(response => response.json())
       .then(pin => {
         const pinData = pin.data
-           render(pinData)
+        //    render(pinData)
+       
+            let newPin = new Pin(pinData, pinData.attributes)
+        document.querySelector('#pins-container').innerHTML += newPin.renderPinCard();
+
     })
 }
