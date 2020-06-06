@@ -9,6 +9,8 @@ function getPins() {
     .then(response => response.json())
     .then(pins => {
         pins.data.forEach(pin => {
+            debugger
+            let newPin = new Pin(pin, pin.attributes) 
             render(pin)     
     })
 })

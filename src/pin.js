@@ -7,6 +7,7 @@ class Pin {
         this.description = pinAttributes.description;
         this.brand = pinAttributes.brand;
         this.user = pinAttributes.user
+
     }
 }
 
