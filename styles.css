@@ -17,8 +17,8 @@ html {
 .pin-image-container {
   background-color: lightgreen;
   display: grid;
-  height: 400px;
-  width: 800px;
+  height: 300px;
+  width: 500px;
   align-content: center;
 }
 
