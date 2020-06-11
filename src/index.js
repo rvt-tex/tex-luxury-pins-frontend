@@ -19,6 +19,17 @@ function getPins() {
 }
 
 
+// function displayPinForm(e) {
+//     e.preventDefault()
+//     const displayForm = document.getElementById("new-pin-form");
+//     if (displayForm.style.display === "none") {
+//       displayForm.style.display = "block";
+//     } else {
+//       displayForm.style.display = "none";
+//     }
+// }
+
+
 function createPinFormHandler(e) {
     e.preventDefault()
     const titleInput = document.querySelector('#input-title').value
@@ -51,3 +62,25 @@ function postfetchPin(title, image_url, description, brand_id, user_id) {
         // debugger
     })
 }
+
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("createPin");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
+
+
+
+

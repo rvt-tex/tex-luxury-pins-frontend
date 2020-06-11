@@ -12,16 +12,16 @@ class Pin {
 
     renderPinCard() {
         return (
-        // `<li>${newPin.title}</li>`
         `<div data-id=${this.id}>
                 <h4>${this.user.name}  @${this.user.email}</h4>
                 <h4>Brand: ${this.brand.name}</h4>
                 <h4>Title: ${this.title}</h4>
-                <img src=${this.image_url} width="800" height="600">
-                <h4>${this.description}</h4>   
-                <br>
+                <img src=${this.image_url} width="600" height="400">
+                <h4>${this.description}</h4>
+                <br>            
                 <button data-id=${this.id}>Delete Pin</button>
-            </div>`
+            </div>
+            <hr>`
         )
     }
 }

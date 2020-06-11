@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
     <title>Tex Luxury Pins</title>
 </head>
 <body>
@@ -15,11 +16,15 @@
             </div>
         </div>
        <br>
-        <div id="login-signup"> 
+        <div id="login-signup-form"> 
             <!-- <a class="nav-link active" data-toggle="tab" href="#Pins">Pins</a> |           
             <a class="nav-link" data-toggle="tab" href="#profile">Profile</a>  | -->
-            <a class="nav-link" data-toggle="tab" href="#login">Login</a>   |
-            <a class="nav-link" data-toggle="tab" href="#signup">Signup</a>
+            <!-- <a class="nav-link" data-toggle="tab" href="#login">Login</a>   |
+            <a class="nav-link" data-toggle="tab" href="#signup">Signup</a>  | -->
+            <button id="login">Login</button> |
+            <button id="signup">Signup</button> |
+            <button id="createPin">Create Pin</button>
+           
         </div>
 
        
@@ -32,10 +37,16 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div> -->
+        <!-- <button onclick="displayPinForm()">Create New Pin</button><br><br> -->
+
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
 
             <div class="form-container">
                 <form id="new-pin-form" class="hidden">
-                    <h3>Create New Pin!</h3>
+                    <h3>Create New Pin</h3>
                     <label for="pin-title">Title</label><br>
                     <input id='input-title' type="text" name="title" value="" placeholder="Enter your Pin Title" class="input-text"><br><br>
                     <label for="image_url">Image Url</label><br>
@@ -57,7 +68,9 @@
                     <input id="form-submit" type="submit" value="Create Pin">
                 </form> 
             </div> 
-
+                
+            </div>
+        </div>
             <!-- <div class="jumbotron">
                 <h4 class="pin-title">Ferrari 812</h4>
                 <hr class="my-4">
@@ -68,10 +81,11 @@
                 <h5 class="pin-description">It gets one of the best engines ever made in the 6.5-liter naturally aspirated V12, which generates a massive 789 hp. Mated with a seven-speed dual-clutch gearbox, the 812 will accelerate to 62 mph in only 2.9 seconds. Stunningly designed, the GT gets 20-inch alloy wheels, LED lighting, and quad exhaust outlets.</h5>
                 
             </div>  -->
-            <div id="pins-container"> 
-
-            </div>
            
+            <div id="pins-container"> 
+            
+            </div>
+        
             <script type="text/javascript" src="src/pin.js"></script>
             <script type="text/javascript" src="src/index.js"></script>
         
