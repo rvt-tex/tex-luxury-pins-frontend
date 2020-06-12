@@ -21,8 +21,6 @@
             <a class="nav-link" data-toggle="tab" href="#profile">Profile</a>  | -->
             <!-- <a class="nav-link" data-toggle="tab" href="#login">Login</a>   |
             <a class="nav-link" data-toggle="tab" href="#signup">Signup</a>  | -->
-            <button id="login">Login</button> |
-            <button id="signup">Signup</button> |
             <button id="createPin">Create Pin</button>
            
         </div>
@@ -47,14 +45,14 @@
             <div class="form-container">
                 <form id="new-pin-form" class="hidden">
                     <h3>Create New Pin</h3>
+                    <label for="pin-username">Uusername</label><br>
+                    <input id='input-username' type="text" name="username" value="" placeholder="Enter your username" class="input-text"><br><br>
                     <label for="pin-title">Title</label><br>
                     <input id='input-title' type="text" name="title" value="" placeholder="Enter your Pin Title" class="input-text"><br><br>
                     <label for="image_url">Image Url</label><br>
                     <input id='input-image_url' type="text" name="image_url" value="" placeholder="Enter your Pin image URL..." class="input-text"><br><br>
                     <label for="description">description</label><br>
                     <textarea id='input-description' name="description" rows="8" cols="80" value="" placeholder="Enter your Pin description here..."></textarea><br><br>
-                    <label for="user">User id</label><br>
-                    <input id='input-user_id' type="text" name="user_id" value="" placeholder="Enter user id" class="input-text"><br><br>
                     <label for="brand">Choose a Brand</label><br>
                         <select id="brands" name="brands">
                             <option value="1">Aston Martin</option>

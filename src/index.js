@@ -32,19 +32,18 @@ function getPins() {
 
 function createPinFormHandler(e) {
     e.preventDefault()
+    const userNameInput = document.querySelector('#input-username').value
     const titleInput = document.querySelector('#input-title').value
 	const image_urlInput = document.querySelector('#input-image_url').value
     const descriptionInput = document.querySelector('#input-description').value
     const brandInput = document.querySelector('#brands').value
     const brandId = parseInt(brandInput)
-    const userInput = document.querySelector('#input-user_id').value
-    const userId = parseInt(userInput)
-    postfetchPin(titleInput, image_urlInput, descriptionInput, brandInput, userInput)
+    postfetchPin(userNameInput, titleInput, image_urlInput, descriptionInput, brandInput)
 
 }
 
-function postfetchPin(title, image_url, description, brand_id, user_id) {
-    const pinBodyData = {title, image_url, description, brand_id, user_id}
+function postfetchPin(username, title, image_url, description, brand_id) {
+    const pinBodyData = {username, title, image_url, description, brand_id}
     fetch(pinsEndpoint, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
