@@ -53,13 +53,10 @@ function postfetchPin(title, image_url, description, brand_id, user_id) {
       .then(response => response.json())
       .then(pin => {
         const pinData = pin.data
-
-        //    render(pinData)
        
             let newPin = new Pin(pinData, pinData.attributes)
         document.querySelector('#pins-container').innerHTML += newPin.renderPinCard();
 
-        // debugger
     })
 }
 
