@@ -1,4 +1,5 @@
 class PinsAdapter {
+    
     constructor() {
         this.baseUrl="http://localhost:3000/pins"
     }
@@ -6,7 +7,4 @@ class PinsAdapter {
     getPins() {
         return fetch(this.baseUrl).then(res => res.json())
     }
-
-
-
 }
