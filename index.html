@@ -16,26 +16,11 @@
             </div>
         </div>
        <br>
-        <div id="login-signup-form"> 
-            <!-- <a class="nav-link active" data-toggle="tab" href="#Pins">Pins</a> |           
-            <a class="nav-link" data-toggle="tab" href="#profile">Profile</a>  | -->
-            <!-- <a class="nav-link" data-toggle="tab" href="#login">Login</a>   |
-            <a class="nav-link" data-toggle="tab" href="#signup">Signup</a>  | -->
+        <div id="pin-form"> 
             <button id="createPin">Create Pin</button>
-           
         </div>
 
-       
-        <!--  <div class="form">
-            <form id="new-user-form" class="hidden">
-                <input type="name" class="form-control" id="name" placeholder="name">
-                <input type="email" class="form-control" id="email" placeholder="Enter email">  
-                <input type="password" class="form-control" id="password" placeholder="Password">
-                <br>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div> -->
-        <!-- <button onclick="displayPinForm()">Create New Pin</button><br><br> -->
+    
 
 
         <div id="myModal" class="modal">
@@ -45,7 +30,7 @@
             <div class="form-container">
                 <form id="new-pin-form" class="hidden">
                     <h3>Create New Pin</h3>
-                    <label for="pin-username">Uusername</label><br>
+                    <label for="pin-username">Username</label><br>
                     <input id='input-username' type="text" name="username" value="" placeholder="Enter your username" class="input-text"><br><br>
                     <label for="pin-title">Title</label><br>
                     <input id='input-title' type="text" name="title" value="" placeholder="Enter your Pin Title" class="input-text"><br><br>
@@ -62,28 +47,23 @@
                             <option value="5">Lamborghini</option>
                         </select>
                     <br><br>
-
                     <input id="form-submit" type="submit" value="Create Pin">
                 </form> 
             </div> 
-                
             </div>
         </div>
-            <!-- <div class="jumbotron">
-                <h4 class="pin-title">Ferrari 812</h4>
-                <hr class="my-4">
-                <div class="pin-image-container">
-                    <img style="height: 400px; width: 800px; display: block;" src="https://api.ferrarinetwork.ferrari.com/v2/network-content/medias/resize/5dd552850cf6995f44de91fa-line-up-ferrari-monza-sp2?apikey=9QscUiwr5n0NhOuQb463QEKghPrVlpaF&width=800&height=600" alt="ferrari 812">
-                </div>
-                <hr class="my-4">
-                <h5 class="pin-description">It gets one of the best engines ever made in the 6.5-liter naturally aspirated V12, which generates a massive 789 hp. Mated with a seven-speed dual-clutch gearbox, the 812 will accelerate to 62 mph in only 2.9 seconds. Stunningly designed, the GT gets 20-inch alloy wheels, LED lighting, and quad exhaust outlets.</h5>
-                
-            </div>  -->
            
             <div id="pins-container"> 
-            
             </div>
         
+            <!-- <div class="new-comment-container">
+                <form id="new-comment-form" class="hidden">
+                    <label for="comment">Comment</label><br>
+                    <input id='input-content' type="text" name="content" value="" placeholder="Place your comment here" class="input-text"><br><br>
+                    <input id="form-submit" type="submit" value="Post Comment">
+                </form> 
+            </div>  -->
+
             <script type="text/javascript" src="src/pin.js"></script>
             <script type="text/javascript" src="src/index.js"></script>
         

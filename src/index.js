@@ -18,18 +18,6 @@ function getPins() {
 })
 }
 
-
-// function displayPinForm(e) {
-//     e.preventDefault()
-//     const displayForm = document.getElementById("new-pin-form");
-//     if (displayForm.style.display === "none") {
-//       displayForm.style.display = "block";
-//     } else {
-//       displayForm.style.display = "none";
-//     }
-// }
-
-
 function createPinFormHandler(e) {
     e.preventDefault()
     const userNameInput = document.querySelector('#input-username').value
@@ -38,6 +26,8 @@ function createPinFormHandler(e) {
     const descriptionInput = document.querySelector('#input-description').value
     const brandInput = document.querySelector('#brands').value
     const brandId = parseInt(brandInput)
+
+    // const ContentInput = document.querySelector('#input-content').value
     postfetchPin(userNameInput, titleInput, image_urlInput, descriptionInput, brandInput)
 
 }
