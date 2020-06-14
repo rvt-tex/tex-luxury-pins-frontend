@@ -7,70 +7,56 @@
     <link rel="stylesheet" type="text/css" href="modal.css">
     <title>Tex Luxury Pins</title>
 </head>
-<body>
-    <main>
-       
-        <div class="card-welcome text-white bg-primary mb-8" style="max-width: 30rem;">
-            <div class="card-body">
-                <h2 class="card-title">WELCOME TO TEX LUXURY PINS</h2>
+    <body>
+        <main>
+            <div class="card-welcome text-white bg-primary mb-8" style="max-width: 30rem;">
+                <div class="card-body">
+                    <h2 class="card-title">WELCOME TO TEX LUXURY PINS</h2>
+                </div>
             </div>
-        </div>
-       <br>
-        <div id="pin-form"> 
-            <button id="createPin">Create Pin</button>
-        </div>
-
-    
-
-
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-
-            <div class="form-container">
-                <form id="new-pin-form" class="hidden">
-                    <h3>Create New Pin</h3>
-                    <label for="pin-username">Username</label><br>
-                    <input id='input-username' type="text" name="username" value="" placeholder="Enter your username" class="input-text"><br><br>
-                    <label for="pin-title">Title</label><br>
-                    <input id='input-title' type="text" name="title" value="" placeholder="Enter your Pin Title" class="input-text"><br><br>
-                    <label for="image_url">Image Url</label><br>
-                    <input id='input-image_url' type="text" name="image_url" value="" placeholder="Enter your Pin image URL..." class="input-text"><br><br>
-                    <label for="description">description</label><br>
-                    <textarea id='input-description' name="description" rows="8" cols="80" value="" placeholder="Enter your Pin description here..."></textarea><br><br>
-                    <label for="brand">Choose a Brand</label><br>
-                        <select id="brands" name="brands">
-                            <option value="1">Aston Martin</option>
-                            <option value="2">Ferrari</option>
-                            <option value="3">Bugatti</option>
-                            <option value="4">Masserati</option>
-                            <option value="5">Lamborghini</option>
-                        </select>
-                    <br><br>
-                    <input id="form-submit" type="submit" value="Create Pin">
-                </form> 
-            </div> 
-            </div>
-        </div>
-           
-            <div id="pins-container"> 
+            <br>
+            <div id="pin-form"> 
+                <button id="createPin">Create Pin</button>
             </div>
         
-            <!-- <div class="new-comment-container">
-                <form id="new-comment-form" class="hidden">
-                    <label for="comment">Comment</label><br>
-                    <input id='input-content' type="text" name="content" value="" placeholder="Place your comment here" class="input-text"><br><br>
-                    <input id="form-submit" type="submit" value="Post Comment">
-                </form> 
-            </div>  -->
-
-            <!-- <script type="text/javascript" src="src/pin.js"></script>
-            <script type="text/javascript" src="src/index.js"></script> -->
-            <script type="text/javascript" src="src/components/pins.js"></script>
-            <script type="text/javascript" src="src/components/app.js"></script>
-            <script type="text/javascript" src="src/adapters/PinsAdapter.js"></script>
-            <script type="text/javascript" src="src/components/pin.js"></script>
-            <script type="text/javascript" src="src/index1.js"></script>
-    </main>
-</body>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                        <div class="form-container">
+                            <form id="new-pin-form" class="hidden">
+                                <h3>Create New Pin</h3>
+                                <label for="pin-username">Username</label><br>
+                                <input id='input-username' type="text" name="username" value="" placeholder="Enter your username" class="input-text"><br><br>
+                                <label for="pin-title">Title</label><br>
+                                <input id='input-title' type="text" name="title" value="" placeholder="Enter your Pin Title" class="input-text"><br><br>
+                                <label for="image_url">Image Url</label><br>
+                                <input id='input-image_url' type="text" name="image_url" value="" placeholder="Enter your Pin image URL..." class="input-text"><br><br>
+                                <label for="description">description</label><br>
+                                <textarea id='input-description' name="description" rows="8" cols="80" value="" placeholder="Enter your Pin description here..."></textarea><br><br>
+                                <label for="brand">Choose a Brand</label><br>
+                                    <select id="brands" name="brands">
+                                        <option value="1">Aston Martin</option>
+                                        <option value="2">Audi</option>
+                                        <option value="3">Bentley</option>
+                                        <option value="4">BMW</option>
+                                        <option value="5">Bugatti</option>
+                                        <option value="6">Ferrari</option>
+                                        <option value="7">Lamborghini</option>
+                                        <option value="8">Masserati</option>
+                                        <option value="9">Mercedes</option>
+                                        <option value="10">Porsche</option>
+                                    </select>
+                                    <br><br>
+                                <input id="form-submit" type="submit" value="Create Pin">
+                            </form> 
+                        </div> 
+                </div>
+            </div>
+            <div id="pins-container"> 
+            </div>
+            
+            <script type="text/javascript" src="src/pin.js"></script>
+            <script type="text/javascript" src="src/index.js"></script>
+        </main>
+    </body>
 </html>

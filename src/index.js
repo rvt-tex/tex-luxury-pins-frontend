@@ -13,9 +13,8 @@ function getPins() {
         pins.data.forEach(pin => {
             let newPin = new Pin(pin, pin.attributes)
         document.querySelector('#pins-container').innerHTML += newPin.renderPinCard();
-       
     })
-})
+    })
 }
 
 function createPinFormHandler(e) {
@@ -26,8 +25,6 @@ function createPinFormHandler(e) {
     const descriptionInput = document.querySelector('#input-description').value
     const brandInput = document.querySelector('#brands').value
     const brandId = parseInt(brandInput)
-
-    // const ContentInput = document.querySelector('#input-content').value
     postfetchPin(userNameInput, titleInput, image_urlInput, descriptionInput, brandInput)
 
 }
@@ -38,14 +35,23 @@ function postfetchPin(username, title, image_url, description, brand_id) {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(pinBodyData)
-      })
-      .then(response => response.json())
-      .then(pin => {
+    })
+    .then(response => response.json())
+    .then(pin => {
         const pinData = pin.data
-       
             let newPin = new Pin(pinData, pinData.attributes)
         document.querySelector('#pins-container').innerHTML += newPin.renderPinCard();
+    })
+}
 
+function delPin(pin) {  
+    fetch(pinsEndpoint + `/${pin}`, {
+        method: "DELETE",
+        headers: {"Content-Type": "application/json"},
+    })
+    .then(response => response.json())
+    .then(pins => {
+        document.getElementById(`${pin}`).innerHTML = "";
     })
 }
 
@@ -66,7 +72,5 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }
-
-
 
 
