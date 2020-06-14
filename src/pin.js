@@ -20,7 +20,6 @@ class Pin {
                 <img src=${this.image_url} width="600" height="400">
                 <h4>${this.description}</h4>
                 <br>     
-                      
                 <button onclick="delPin(${this.id})">Delete Pin</button>
             </div>
             <hr>`
