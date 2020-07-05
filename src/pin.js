@@ -7,7 +7,6 @@ class Pin {
         this.image_url = pinAttributes.image_url;
         this.description = pinAttributes.description;
         this.brand = pinAttributes.brand;
-        this.comment = pinAttributes.content;
         Pin.all.push(this);
     }
 
@@ -28,3 +27,5 @@ class Pin {
 }
 
 Pin.all = [];
+
+
