@@ -13,7 +13,7 @@ class Pin {
     renderPinCard() {
         return (
             `<div id=${this.id}>
-                <h4>User: ${this.username}</h4>
+                <h4>Username: ${this.username}</h4>
                 <h4>Brand: ${this.brand.name}</h4>
                 <h4>Title: ${this.title}</h4>
                 <img src=${this.image_url} width="600" height="400">

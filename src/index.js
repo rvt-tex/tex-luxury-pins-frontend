@@ -10,8 +10,21 @@ function getPins() {
     fetch(pinsEndpoint)
     .then(response => response.json())
     .then(pins => {
-        pins.data.forEach(pin => {
-            let newPin = new Pin(pin, pin.attributes)
+        let myData = pins.data
+        let destructureArray = myData.map((eachPin) => {return eachPin.attributes});
+        destructureArray.sort(function(a, b) {
+            const usernameA = a.username;
+            const usernameB = b.username; 
+            if (usernameA < usernameB) {
+              return -1;
+            }
+            if (usernameA > usernameB) {
+              return 1;
+            }
+            return 0;
+        });
+        destructureArray.forEach(pin => {
+            let newPin = new Pin(pin, pin)
         document.querySelector('#pins-container').innerHTML += newPin.renderPinCard();
     })
     })
@@ -72,5 +85,3 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }
-
-
